@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .parent {
+            display: flex;
+        }
+
+        .box {
+            height: 120px;
+            width: 120px;
+            background-color: darkgoldenrod;
+            position: relative;
+            animation-name: MyAnimate;
+            animation-duration: 8s;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes MyAnimate {
+            0% {
+                background-color: darkmagenta;
+                left: 0px;
+                top: 0px;
+                rotate: 0deg;
+            }
+
+            12.5% {
+                background-color: darkmagenta;
+                left: 250px;
+                top: 0px;
+                rotate: 0deg;
+            }
+
+            25% {
+                background-color: darkmagenta;
+                left: 250px;
+                top: 0px;
+                rotate: 90deg;
+            }
+
+            37.5% {
+                background-color: darkmagenta;
+                left: 250px;
+                top: 250px;
+                rotate: 90deg;
+            }
+
+            50% {
+                background-color: darkmagenta;
+                left: 250px;
+                top: 250px;
+                rotate: 180deg;
+            }
+
+            62.5% {
+                background-color: darkmagenta;
+                left: 0px;
+                top: 250px;
+                rotate: 180deg;
+            }
+
+            75% {
+                background-color: darkmagenta;
+                left: 0px;
+                top: 250px;
+                rotate: 270deg;
+            }
+
+            87.5% {
+                background-color: darkmagenta;
+                left: 0px;
+                top: 0px;
+                rotate: 270deg;
+            }
+
+            100% {
+                background-color: darkmagenta;
+                left: 0px;
+                top: 0px;
+                rotate: 360deg;
+            }
+        }
+    </style>
+
+    <body>
+        <div class="parent">
+            <div class="box"></div>
+        </div>
+    </body>
+</body>
+
+</html>

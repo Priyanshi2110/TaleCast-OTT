@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+        justify-content: space-between;
+    }
+     .box{
+        height: 10vw;
+        width: 10vw;
+        background-color: rgb(164, 222, 222);
+        transition: height 2s;
+       
+    }
+    .box:hover{
+        height: 20vw;
+        background-color: blueviolet;
+    }
+    .box1{transition-timing-function: linear;}
+    .box2{transition-timing-function: ease;}
+    .box3{transition-timing-function: ease-in;}
+    .box4{transition-timing-function: ease-out;}
+    .box5{transition-timing-function: ease-in-out;}
+</style>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class=" box box2"></div>
+        <div class=" box box3"></div>
+        <div class=" box box4"></div>
+        <div class=" box box5"></div>
+    </div>
+</body>
+</html>

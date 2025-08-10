@@ -1,0 +1,8 @@
+.container img{
+    height: 70px;
+    width: 100px;
+}
+section.carr img{
+    height: 500px;
+    object-fit: cover;
+}

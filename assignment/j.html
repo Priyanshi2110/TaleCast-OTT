@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div.p{
+            background-color: rgb(169, 12, 12);
+        }
+
+        nav{
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            padding: 0 30px;
+            border-bottom: 2px solid;
+        }
+        ul{
+           text-decoration: none; 
+            color: black;
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        li{
+            padding: 0 10px;
+            font-size: 25px;
+            margin: 10px 10px;
+           
+            
+        }
+        .lefticons{
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        .righticons{
+           justify-content: space-evenly;
+        }
+        .logo{
+             margin: 50px 50px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            height: 60px;
+        }
+        img{
+            margin: 50px 50px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        div.parent{
+            background-color: rgb(194, 103, 103);
+
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            object-fit: cover;
+            justify-content: space-evenly;
+        }
+        div.child1{
+            background-color: rgb(228, 218, 218);
+
+            width: 500px;
+            margin: 10px ;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;
+            color: darkred;
+        }
+        div.child2{
+            background-color:rgb(228, 218, 218);
+
+            width: 500px;
+            margin: 10px;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            color: darkred;
+        }
+        /*service css*/
+        section.service{
+            margin-top: 50px;
+
+        }
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+
+        }
+        .card{
+            background-color: aqua;
+            padding: 10px;
+            box-shadow: 1px 1px 10px black;
+            text-align: center;
+            width: 21%;
+        }
+        
+        .card .caption{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /*Responsive css*/
+        @media (max-width:480px){
+            .p{
+                display: none;
+            }
+            .parent{
+                width: 100%;
+            }
+            .card{
+                width: 80%;
+            }
+        }
+        @media (min-width:480px) and (max-width:720px){
+             .p{
+                display: none;
+            }
+           .parent{
+            width: 100%;
+           }
+            .card{
+                width: 45%;
+            }
+        }
+        @media (min-width:720px) and (max-width:900px){
+            .p{
+                display: none;
+            }
+            .child1{
+                width: 40%;
+            }
+            .child2{
+                width: 40%;
+            }
+            .card{
+                width: 40%;
+            }
+        }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="p" style="color: white;"><marquee behavior="" direction="">All India Available</marquee></div>
+        <nav>
+            <div class="lefticons">
+            <i class="fa-solid fa-bars" style="margin: auto;"></i>
+            <i class="fa-solid fa-location-dot" style="margin: auto;"></i></div>
+            <div style="display: flex;flex-direction: column;"> 
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Fabindia_logo.svg" alt="" height=80px; width="100%";>
+            </div>
+            <div class="righticons">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="parent">
+
+        
+        <div class="child1" >
+            <img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="" height="500px" style="border: 1px solid;">
+            <h1 style="margin: auto; ">My Image</h1>
+        </div>
+        <div class="child2" >
+        <h1 style=" align-items: center;">My Image</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod illo consectetur praesentium velit nam magni sed corrupti illum. Repellendus optio amet, reiciendis quidem sequi placeat mollitia est at iste! Excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fuga vel, accusantium beatae mollitia ducimus, repellendus, molestias commodi sit qui nobis officiis nemo debitis adipisci? Eveniet non voluptatem suscipit officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis similique hic quas officia molestias, vel cumque sequi quisquam recusandae, eum labore explicabo. Voluptates repudiandae, consequuntur fugit necessitatibus reprehenderit aut adipisci Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam in fugit odio culpa quisquam iusto minima esse. Sequi culpa optio molestias voluptates. Nemo possimus alias illum quas facere eos porro. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores sit non totam cumque. Consequatur sed doloremque quasi expedita, repudiandae et eum fugiat neque exercitationem dolore hic magni iste numquam <inventore class="lorem"></inventore></p>
+            <button style="margin: 0 120px;">CLICK ME</button>
+        </div>
+        
+    </div>
+    </header>
+    <!----service section-->
+    <section class="service">
+        <div class="card-container">
+            <div class="card">
+               
+            <div class="caption">
+                <h2>This is my image</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur esse debitis beatae deleniti eos rerum voluptas ex dolorem maxime facilis illum, repudiandae deserunt. Porro quaerat minima fugit hic veniam.</p>
+                <button>click me</button>
+            </div>
+            </div>
+            <div class="card">
+            <div class="caption">
+                <h2>This is my image</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur esse debitis beatae deleniti eos rerum voluptas ex dolorem maxime facilis illum, repudiandae deserunt. Porro quaerat minima fugit hic veniam.</p>
+                <button>click me</button>
+            </div>
+            </div>
+            <div class="card">
+            <div class="caption">
+                <h2>This is my image</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur esse debitis beatae deleniti eos rerum voluptas ex dolorem maxime facilis illum, repudiandae deserunt. Porro quaerat minima fugit hic veniam.</p>
+                <button>click me</button>
+            </div>
+            </div>
+            <div class="card">
+            <div class="caption">
+                <h2>This is my image</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consequatur esse debitis beatae deleniti eos rerum voluptas ex dolorem maxime facilis illum, repudiandae deserunt. Porro quaerat minima fugit hic veniam.</p>
+                <button>click me</button>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html> 

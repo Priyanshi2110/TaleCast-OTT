@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bs-index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-4 border-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNo7WM9PHyM8ypmyguH-uSWP4xFDP6o5XFUA&s" alt=""></a>
+                <div class="d-flex">
+                    <img class="ms-5 h-3" src="https://t4.ftcdn.net/jpg/12/45/12/21/360_F_1245122178_4l1s1FcGSrAo5nyHpK03eljbO177Zd0D.jpg" alt="">
+                    <select class="form-select h-50 w-50 mt-3 ms-2" >
+                        <option selected>India</option>
+                        <option value="1">England</option>
+                        <option value="2">US</option>
+                    </select>
+                </div>
+                <div class="collapse navbar-collapse justify-content-center">
+                <form class="d-flex ms-auto">
+                    <input class="form-control ms-5 " type="search" placeholder="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynav">
+                    <ul class="navbar-nav ms-auto mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="carr">
+    <div id="photo" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#photo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#photo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#photo" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://st5.depositphotos.com/34206678/78438/i/450/depositphotos_784380100-stock-photo-wild-nature-damp-climate-background.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/060/117/855/small/red-rose-is-the-main-focus-of-the-image-with-a-blue-background-and-a-few-other-flowers-in-the-background-the-rose-is-the-most-prominent-and-beautiful-flower-in-the-picture-photo.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq8MolffnXO47Ua7gFiRMwpl93cT5EdgVMTA&s" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#photo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#photo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</section>
+<div class="container m-5">
+    <div class="row ">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-primary border">col-3</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-primary border">col-3</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-primary border">col-3</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-primary border">col-3</div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4 bg-danger border">col-4</div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-4 bg-danger border">col-4</div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 bg-danger border">col-4</div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 bg-warning border">col-6</div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 bg-warning border">col-6</div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2 bg-info border">col-2</div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+        <div class="col-6 col-sm-4 col-md-2 col-lg-1 bg-success border">col-1</div>
+    </div>
+</div>
+</body>
+
+</html>
