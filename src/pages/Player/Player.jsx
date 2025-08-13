@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Player.css";
 import back_arrow_icon from "../../assets/back_arrow_icon.png";
+import TaleCast_spinner from '../../assets/netflix_spinner.gif'
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 
 const Player = () => {
@@ -8,6 +9,9 @@ const Player = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [videoKey, setVideoKey] = useState(null);
+  const[loading,setLoading]=useState(true);
+  const [overview, setOverview] = useState("");
+  const[description,setdescription] =useState(false);
 
   // Detect media type from query params or path
   const mediaType = new URLSearchParams(location.search).get("mediaType") || "movie";
@@ -20,8 +24,10 @@ const Player = () => {
     },
   };
 
-  useEffect(() => {
+
+  useEffect(() => { 
     const fetchVideo = async () => {
+      setLoading(true);
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/${mediaType}/${id}/videos?language=en-US`,
@@ -35,17 +41,28 @@ const Player = () => {
         );
 
         setVideoKey(trailer?.key);
+        const detailRes = await fetch(
+          `https://api.themoviedb.org/3/${mediaType}/${id}?language=en-US`,
+          options
+        );
+        const detailData = await detailRes.json();
+        setOverview(detailData.overview || "No description available.");
+
       } catch (err) {
         console.error("Failed to fetch trailer:", err);
+      }finally{
+        setLoading(false);
       }
     };
-
     fetchVideo();
 
 
   }, [id, mediaType]);
 
   return (
+    loading?<div className="login_spinner">
+          <img src={TaleCast_spinner} alt="" />
+        </div>:
     <div className="player">
       <img
         src={back_arrow_icon}
@@ -53,6 +70,14 @@ const Player = () => {
         className="back-button"
         alt="Back"
       />
+
+      <div
+        className="video-container"
+        onMouseEnter={() => setdescription(true)}
+        onMouseLeave={() => setdescription(false)}
+      >
+
+
       {videoKey ? (
         <iframe
           width="100%"
@@ -66,6 +91,13 @@ const Player = () => {
       ) : (
         <p style={{ color: "white", textAlign: "center" }}>Trailer not available</p>
       )}
+
+       {description && (
+          <div className="tooltip">
+            {overview}
+          </div>
+        )}
+      </div>
 
     </div>
 

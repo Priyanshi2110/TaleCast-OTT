@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const TitleCard = ({ title = "Popular on TaleCast", category = "now_playing", mediaType = "movie" }) => {
   const [apiData, setApiData] = useState([]);
   const cardsRef = useRef();
+  const [hoveredCard,setHoveredCard]=useState(null);
   const navigate = useNavigate();
 
   const options = {
@@ -54,6 +55,8 @@ const TitleCard = ({ title = "Popular on TaleCast", category = "now_playing", me
             className="card"
             key={card.id}
             onClick={() => navigate(`/player/${mediaType}/${card.id}`)}
+            onMouseEnter={() => setHoveredCard(card.id)}
+            onMouseLeave={() => setHoveredCard(null)}
           >
             <img
               src={card.backdrop_path
@@ -62,6 +65,12 @@ const TitleCard = ({ title = "Popular on TaleCast", category = "now_playing", me
               alt={card.original_title || card.original_name || "No Title"}
             />
             <p>{card.original_title || card.original_name}</p>
+
+            {hoveredCard === card.id && (
+              <div className="desc-box">
+                {card.overview?card.overview.slice(0,100)+"...." : "No description available."}
+              </div>
+            )}
           </div>
         ))}
       </div>
